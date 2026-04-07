@@ -1,0 +1,77 @@
+export const metadata = {
+  title: 'Development License',
+  description:
+    'Get a Tiro.health development license to access the Form SDK packages, Docker images, and the Form Designer application.',
+}
+
+export const sections = [
+  { title: 'Who is this for?', id: 'who-is-this-for' },
+  { title: 'What you get', id: 'what-you-get' },
+  { title: 'How to request a license', id: 'how-to-request' },
+  { title: 'Next steps', id: 'next-steps' },
+]
+
+# Development License
+
+A Tiro.health development license gives your team the credentials and tooling access needed to integrate the Form SDK into your application. It is aimed at **healthcare software vendors** who need FHIR Structured Data Capture (SDC) capabilities — enabling structured clinical form filling directly within their own software.
+
+<Note>
+  Already have a license and service account key? Head straight to [Registry & Authentication Setup](/registry-setup) to configure your environment.
+</Note>
+
+## Who is this for? {{ id: 'who-is-this-for' }}
+
+The development license is designed for software teams building or extending clinical applications:
+
+- **EHR / LIS / IMS / RIS / PACS vendors** embedding structured clinical questionnaires inside their existing workflows
+- **Healthcare IT integrators** connecting third-party systems via FHIR SDC APIs
+- **Digital health startups** building new FHIR-native applications that require validated, narrative-generating forms
+
+If your application needs to render, populate, validate, or extract structured data from clinical forms, the Form SDK — and a development license — is what enables that.
+
+## What you get {{ id: 'what-you-get' }}
+
+<Row>
+<Col>
+
+### SDK packages & Docker images
+
+- **`@tiro-health/web-sdk`** npm package — the Web Component for rendering interactive FHIR questionnaires in your frontend
+- **SDC Backend Service** Docker image — the processing service that handles population, validation, narrative generation, and terminology lookups
+- **Tiro.health Template Server** access — pull the questionnaire definitions (FHIR `Questionnaire` resources) your forms are built from
+
+</Col>
+<Col>
+
+### Form Designer application
+
+- **Tiro.health Form Designer** — a dedicated web application for creating, editing, and managing your clinical form templates
+- Design questionnaires visually without writing raw FHIR JSON
+- Publish templates directly to the Template Server for use in your integration
+
+</Col>
+</Row>
+
+## How to request a license {{ id: 'how-to-request' }}
+
+Getting a development license is a three-step process:
+
+### 1. Send us a request
+
+Email [support@tiro.health](mailto:support@tiro.health?subject=Development%20License%20Request) with the subject line **"Development License Request"** and include:
+
+- A brief description of your application and use case
+- Your organisation name
+- Any relevant technical context (FHIR server, EHR platform, etc.)
+
+### 2. Agree on license terms
+
+Our team will get back to you to discuss the license agreement. The development license covers local development and integration testing. Production deployment terms are agreed separately.
+
+### 3. Receive your credentials
+
+Once the license is in place, you'll receive a **service account key** (JSON file). This key is your credential for authenticating against the Tiro.health registries. Keep it secure and do not commit it to source control.
+
+## Next steps {{ id: 'next-steps' }}
+
+Once you have your service account key, follow the [Registry & Authentication Setup](/registry-setup) guide to configure Docker and npm on your machine. After that, jump into the [Web SDK quickstart](/web) to render your first form.
